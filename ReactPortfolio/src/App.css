@@ -1,5 +1,10 @@
-body {
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   background-color: black;
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,17 +20,54 @@ h1 {
 
 li {
   list-style: none;
-  padding: 10px 20px;
+  margin: 0 20px;
 }
 
 li a {
   text-decoration: none;
   color: white;
+  font-size: 16px;
+  
 }
 
 ul {
   display: flex;
+  position: fixed;
+  right: 0px;
+  top: -16px;
   justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+
+  /* border: 1px solid red; */
+  background-color: var(--gray);
 }
 
+section {
+  border: 1px solid red;
+  height: 100vh;
+  margin: 10px;
+}
+
+.about {
+  display: flex;
+}
+
+.pictures, .content {
+  /* border: 1px solid red; */
+  width: 50%;
+}
+
+div {
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+
+
+:root {
+
+  --gray: #1F1F1E;
+
+
+}
 

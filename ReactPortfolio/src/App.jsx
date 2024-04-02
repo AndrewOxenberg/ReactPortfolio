@@ -40,14 +40,19 @@ function Navbar() {
 
 function Name() {
   return (
-    <h1>Andrew Oxenberg</h1>
+    <section>
+      <h1>Andrew Oxenberg</h1>
+    </section>
   )
 }
 
 function About() {
   return (
-    <section>
-      <h2>About</h2>
+    <section className="about">
+
+    <div className="pictures"></div>
+    <div className="content">
+    <h2>About</h2>
       <h4>I am a current freshman and the University of Maryland Studying computer Science.
         I enjoy building full stack web applications and exploring all the different fields of CS.
         Some of my interests outside of school include, boxing, following sports, playing video games and hanging out with friends.
@@ -55,7 +60,9 @@ function About() {
 
       <h4>I am the current President of the Sigma Phi Epsilon Maryland Beta chapter. I am in the bootcamp of the App Development Club at UMD, 
         an exclusive computer science based club dedicated to teaching members real-life skills and apply them in projects with fortune 500 companies.</h4>
-      <img src="" alt="" />
+    </div>
+
+     
     </section>
   )
 }
@@ -75,8 +82,8 @@ function Portfolio() {
       </div>
 
       <div className="portfolio-item">
-        <h3>Portfolio Website</h3>
-        <h4>A simple portfolio website to practice project based Web Development.</h4>
+        <h3>Personal Website</h3>
+        <h4>A simple personal website to practice project based Web Development.</h4>
       </div>
 
       <div className="portfolio-item">
