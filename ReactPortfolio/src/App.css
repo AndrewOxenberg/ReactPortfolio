@@ -1,3 +1,7 @@
+:root {
+  --gray: #1F1F1E;
+}
+
 
 html, body {
   margin: 0;
@@ -64,10 +68,101 @@ div {
 }
 
 
-:root {
+img {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  transform-style: flat;
+  /* border: 1px solid red; */
+}
 
-  --gray: #1F1F1E;
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
 
+
+.about1 {
+  border: 1px solid red;
+  top: 103px; 
+  left: 493px;
+}
+
+.about2 {
+  border: 1px solid orange;
+  top: 318px;
+  left: 758px;
+  z-index: 2;
+}
+
+.portfolio1 {
+  border: 1px solid yellow;
+  top: 430px; 
+  left: 847px;
+}
+
+.portfolio2 {
+  border: 1px solid greenyellow;
+  top: 231px;
+  left: -27px; 
+}
+
+.portfolio3 {
+  border: 1px solid hotpink;
+  top: 249px; 
+  /* left: 252px;   */
+  left: 500px;
+  /* transform: scale3d(0.7, 0.7, 0.7); */
+
+  animation: moveAroundCircle 60s linear infinite;
 
 }
+
+.experience1 {
+  border: 1px solid green;
+  top: 354px; 
+  left: -50px; 
+
+}
+
+.experience2 {
+  border: 1px solid blue;
+  top: 529px; 
+  left: 165px; 
+}
+
+.experience3 {
+  border: 1px solid blueviolet;
+  top: 127px; 
+  left: 226px;
+}
+
+.resume {
+  border: 1px solid burlywood;
+  top: 547px; 
+  left: -282px;
+}
+
+.section-hub {
+  perspective: 1000px;
+}
+
+@keyframes moveAroundCircle {
+  0% {
+    transform: translate3d(0px, 0px, 0px); /* Starting position */
+  }
+  25% {
+    transform: translate3d(-250px, 0px, -100px); /* 0-90 */
+  }
+  50% {
+    transform: translate3d(-500px, 0px, 0px); /* 90-180 */
+  }
+  75% {
+    transform: translate3d(-250px, 0px, 100px); /* 180-270 */
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px); /* 270-360 */
+  }
+}
+
 

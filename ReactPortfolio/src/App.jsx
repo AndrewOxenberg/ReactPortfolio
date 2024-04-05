@@ -6,9 +6,10 @@ function App() {
     <>
       <Navbar />
       <Name />
-      <About />
+      <Hub />
+      {/* <About />
       <Portfolio />
-      <Experience />
+      <Experience /> */}
     </>
   )
 }
@@ -50,19 +51,20 @@ function About() {
   return (
     <section className="about">
 
-    <div className="pictures"></div>
-    <div className="content">
-    <h2>About</h2>
-      <h4>I am a current freshman and the University of Maryland Studying computer Science.
-        I enjoy building full stack web applications and exploring all the different fields of CS.
-        Some of my interests outside of school include, boxing, following sports, playing video games and hanging out with friends.
-      </h4>
+      <div className="pictures"></div>
+      <div className="content">
+        <h2>About</h2>
+        <h4>I am a current freshman and the University of Maryland Studying computer Science.
+          I enjoy building full stack web applications and exploring all the different fields of CS.
+          Some of my interests outside of school include, boxing, following sports, playing video games and hanging out with friends.
+        </h4>
 
-      <h4>I am the current President of the Sigma Phi Epsilon Maryland Beta chapter. I am in the bootcamp of the App Development Club at UMD, 
-        an exclusive computer science based club dedicated to teaching members real-life skills and apply them in projects with fortune 500 companies.</h4>
-    </div>
+        <h4>I am the current President of the Sigma Phi Epsilon Maryland Beta chapter. I am in the bootcamp of the App Development Club at UMD,
+          an exclusive computer science based club dedicated to teaching members real-life skills and apply them in projects with fortune 500 companies.
+          I am also a member in the UMD boxing club.</h4>
+      </div>
 
-     
+
     </section>
   )
 }
@@ -75,8 +77,8 @@ function Portfolio() {
       <div className="portfolio-item">
         <h3>Blackjack Mastery</h3>
         <h4>A Blackjack website designed to teach all the components to become a winning Blackjack player.
-            Contains information and practice on basic strategy, card counting, and advanced techniques. 
-            The process is gamified with achievements and a leaderboard to keep users engaged as they progress through skill levels.
+          Contains information and practice on basic strategy, card counting, and advanced techniques.
+          The process is gamified with achievements and a leaderboard to keep users engaged as they progress through skill levels.
         </h4>
         <h4>Tools used: HTML, CSS, JS</h4>
       </div>
@@ -118,7 +120,35 @@ function Experience() {
         <p>August 2022 - August 2023</p>
       </div>
 
-      </section>
+    </section>
+
+  )
+}
+
+function Hub() {
+  return (
+    <section className='section-hub'>
+
+      <img className='image about1' src="https://picsum.photos/101" alt="" />
+
+      <img className='image about2' src="https://picsum.photos/102" alt="" />
+
+      <img className='image portfolio1' src="https://picsum.photos/100" alt="" />
+
+      <img className='image portfolio2' src="https://picsum.photos/104" alt="" />
+
+      <img className='image portfolio3' src="https://picsum.photos/105" alt="" />
+
+      <img className='image experience1' src="https://picsum.photos/106" alt="" />
+
+      <img className='image experience2' src="https://picsum.photos/107" alt="" />
+
+      <img className='image experience3' src="https://picsum.photos/108" alt="" />
+      
+      <img className='image resume' src="https://picsum.photos/109" alt=""/>
+
+    </section>
+
   )
 }
 
