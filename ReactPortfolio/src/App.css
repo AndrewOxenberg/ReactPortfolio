@@ -68,11 +68,21 @@ div {
 }
 
 
+.img-container {
+
+  animation: move 10s linear infinite;
+
+}
+
+.section-hub {
+  perspective: 1000px;
+}
+
 img {
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease-in-out;
-  transform-style: flat;
+
   /* border: 1px solid red; */
 }
 
@@ -86,83 +96,91 @@ img:hover {
   border: 1px solid red;
   top: 103px; 
   left: 493px;
+  transform: translateZ(500px);
 }
 
 .about2 {
   border: 1px solid orange;
   top: 318px;
   left: 758px;
-  z-index: 2;
+  transform: translateZ(1000px);
 }
 
 .portfolio1 {
   border: 1px solid yellow;
   top: 430px; 
   left: 847px;
+  perspective-origin: top;
+  transform: translateZ(1500px);
 }
 
 .portfolio2 {
   border: 1px solid greenyellow;
   top: 231px;
   left: -27px; 
+  transform: translateZ(2000px);
 }
 
 .portfolio3 {
   border: 1px solid hotpink;
   top: 249px; 
-  /* left: 252px;   */
-  left: 500px;
-  /* transform: scale3d(0.7, 0.7, 0.7); */
-
-  animation: moveAroundCircle 60s linear infinite;
-
+  left: 252px;  
+  transform: translateZ(2500px);
 }
 
 .experience1 {
   border: 1px solid green;
   top: 354px; 
   left: -50px; 
-
+  transform: translateZ(2000px);
 }
 
 .experience2 {
   border: 1px solid blue;
   top: 529px; 
   left: 165px; 
+  transform: translateZ(1500px);
 }
 
 .experience3 {
   border: 1px solid blueviolet;
   top: 127px; 
   left: 226px;
+  transform: translateZ(1000px);
 }
 
 .resume {
   border: 1px solid burlywood;
   top: 547px; 
   left: -282px;
+  transform: translateZ(500px);
 }
 
-.section-hub {
-  perspective: 1000px;
-}
 
-@keyframes moveAroundCircle {
+@keyframes move {
+
   0% {
-    transform: translate3d(0px, 0px, 0px); /* Starting position */
+    transform: rotateY(0deg) translateZ(100px) rotateY(0deg);
   }
   25% {
-    transform: translate3d(-250px, 0px, -100px); /* 0-90 */
+    transform: rotateY(90deg) translateZ(100px) rotateY(-90deg); 
   }
   50% {
-    transform: translate3d(-500px, 0px, 0px); /* 90-180 */
+    transform: rotateY(180deg) translateZ(100px) rotateY(-180deg); 
   }
   75% {
-    transform: translate3d(-250px, 0px, 100px); /* 180-270 */
+    transform: rotateY(270deg) translateZ(100px) rotateY(-270deg);
   }
   100% {
-    transform: translate3d(0px, 0px, 0px); /* 270-360 */
+    transform: rotateY(360deg) translateZ(100px) rotateY(-360deg); 
   }
+  /* 0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  } */
+
 }
 
 

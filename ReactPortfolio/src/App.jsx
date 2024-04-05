@@ -1,4 +1,5 @@
 import './App.css'
+import React, { useState } from 'react';
 
 function App() {
 
@@ -129,23 +130,26 @@ function Hub() {
   return (
     <section className='section-hub'>
 
-      <img className='image about1' src="https://picsum.photos/101" alt="" />
+      <div className='img-container'>
+        <img className='image about1' src="https://picsum.photos/101" alt="" />
 
-      <img className='image about2' src="https://picsum.photos/102" alt="" />
+        <img className='image about2' src="https://picsum.photos/102" alt="" />
 
-      <img className='image portfolio1' src="https://picsum.photos/100" alt="" />
+        <img className='image portfolio1' src="https://picsum.photos/100" alt="" />
 
-      <img className='image portfolio2' src="https://picsum.photos/104" alt="" />
+        <img className='image portfolio2' src="https://picsum.photos/104" alt="" />
 
-      <img className='image portfolio3' src="https://picsum.photos/105" alt="" />
+        <img className='image portfolio3' src="https://picsum.photos/105" alt="" />
 
-      <img className='image experience1' src="https://picsum.photos/106" alt="" />
+        <img className='image experience1' src="https://picsum.photos/106" alt="" />
 
-      <img className='image experience2' src="https://picsum.photos/107" alt="" />
+        <img className='image experience2' src="https://picsum.photos/107" alt="" />
 
-      <img className='image experience3' src="https://picsum.photos/108" alt="" />
-      
-      <img className='image resume' src="https://picsum.photos/109" alt=""/>
+        <img className='image experience3' src="https://picsum.photos/108" alt="" />
+
+        <img className='image resume' src="https://picsum.photos/109" alt="" />
+      </div>
+
 
     </section>
 
