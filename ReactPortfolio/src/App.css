@@ -11,7 +11,7 @@ html, body {
   
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   color: white;
 }
 
@@ -48,7 +48,7 @@ ul {
 }
 
 section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
   margin: 10px;
 }
@@ -68,22 +68,19 @@ div {
 }
 
 
-.img-container {
-
-  animation: move 10s linear infinite;
-
-}
-
 .section-hub {
   perspective: 1000px;
 }
+
+.img-container {
+  display: flex;
+}
+
 
 img {
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease-in-out;
-
-  /* border: 1px solid red; */
 }
 
 img:hover {
@@ -96,14 +93,12 @@ img:hover {
   border: 1px solid red;
   top: 103px; 
   left: 493px;
-  transform: translateZ(500px);
 }
 
 .about2 {
   border: 1px solid orange;
   top: 318px;
   left: 758px;
-  transform: translateZ(1000px);
 }
 
 .portfolio1 {
@@ -111,76 +106,47 @@ img:hover {
   top: 430px; 
   left: 847px;
   perspective-origin: top;
-  transform: translateZ(1500px);
+
 }
 
 .portfolio2 {
   border: 1px solid greenyellow;
   top: 231px;
   left: -27px; 
-  transform: translateZ(2000px);
+
 }
 
 .portfolio3 {
   border: 1px solid hotpink;
   top: 249px; 
   left: 252px;  
-  transform: translateZ(2500px);
 }
 
 .experience1 {
   border: 1px solid green;
   top: 354px; 
   left: -50px; 
-  transform: translateZ(2000px);
 }
 
 .experience2 {
   border: 1px solid blue;
   top: 529px; 
   left: 165px; 
-  transform: translateZ(1500px);
 }
 
 .experience3 {
   border: 1px solid blueviolet;
   top: 127px; 
   left: 226px;
-  transform: translateZ(1000px);
 }
 
 .resume {
   border: 1px solid burlywood;
   top: 547px; 
   left: -282px;
-  transform: translateZ(500px);
 }
 
-
-@keyframes move {
-
-  0% {
-    transform: rotateY(0deg) translateZ(100px) rotateY(0deg);
-  }
-  25% {
-    transform: rotateY(90deg) translateZ(100px) rotateY(-90deg); 
-  }
-  50% {
-    transform: rotateY(180deg) translateZ(100px) rotateY(-180deg); 
-  }
-  75% {
-    transform: rotateY(270deg) translateZ(100px) rotateY(-270deg);
-  }
-  100% {
-    transform: rotateY(360deg) translateZ(100px) rotateY(-360deg); 
-  }
-  /* 0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  } */
-
+.popup.open {
+  background-color: aliceblue;
+  
 }
-
-

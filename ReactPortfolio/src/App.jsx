@@ -8,9 +8,6 @@ function App() {
       <Navbar />
       <Name />
       <Hub />
-      {/* <About />
-      <Portfolio />
-      <Experience /> */}
     </>
   )
 }
@@ -55,12 +52,12 @@ function About() {
       <div className="pictures"></div>
       <div className="content">
         <h2>About</h2>
-        <h4>I am a current freshman and the University of Maryland Studying computer Science.
+        <h4>I am a current freshman at the University of Maryland Studying computer Science.
           I enjoy building full stack web applications and exploring all the different fields of CS.
           Some of my interests outside of school include, boxing, following sports, playing video games and hanging out with friends.
         </h4>
 
-        <h4>I am the current President of the Sigma Phi Epsilon Maryland Beta chapter. I am in the bootcamp of the App Development Club at UMD,
+        <h4>I am born and raised in Laurel, Maryland. I'm in the bootcamp of the App Development Club at UMD,
           an exclusive computer science based club dedicated to teaching members real-life skills and apply them in projects with fortune 500 companies.
           I am also a member in the UMD boxing club.</h4>
       </div>
@@ -127,11 +124,32 @@ function Experience() {
 }
 
 function Hub() {
+
+  const [popupInfo, setPopupInfo] = useState(null);
+
+  function setInfoPanel(panelInfo) {
+    setPopupInfo(panelInfo);
+  }
+
+  function closeInfoPanel() {
+    setPopupInfo(null);
+  }
+
+
   return (
     <section className='section-hub'>
 
       <div className='img-container'>
-        <img className='image about1' src="https://picsum.photos/101" alt="" />
+        <img 
+          className='image about1' 
+          src="https://picsum.photos/101" 
+          alt="" 
+          onClick={() => setInfoPanel({title: "About Me: Background", imgSource: "https://picsum.photos/101",
+          content: "I am a current freshman at the University of Maryland " +
+          " Studying computer Science. I enjoy building full stack web applications and exploring all the different fields of CS. " + 
+          "Some of my interests outside of school include, boxing, following sports, playing video games and hanging out with friends."})}
+
+        />
 
         <img className='image about2' src="https://picsum.photos/102" alt="" />
 
@@ -151,9 +169,31 @@ function Hub() {
       </div>
 
 
+      {popupInfo && (
+        <Popup 
+          isOpen = {true}
+          onClose = {closeInfoPanel}
+          panelInfo = {popupInfo}
+        />
+      )}
     </section>
 
   )
 }
+
+
+function Popup({isOpen, onClose, panelInfo}) {
+  return (
+    <div className={`popup ${isOpen ? 'open': ''}`}>
+      <div className="popup-inner">
+        <img className="image" src={panelInfo.imgSource} alt="" />  
+        <h3>{panelInfo.title}</h3>
+        <p>{panelInfo.content}</p>
+      </div>
+    </div>
+  )
+}
+
+
 
 export default App
