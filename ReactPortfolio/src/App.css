@@ -45,6 +45,8 @@ ul {
 
   /* border: 1px solid red; */
   background-color: var(--gray);
+
+  transition: all 0.3s ease-in-out;
 }
 
 section {
@@ -53,100 +55,118 @@ section {
   margin: 10px;
 }
 
-.about {
-  display: flex;
-}
-
-.pictures, .content {
-  /* border: 1px solid red; */
-  width: 50%;
-}
-
-div {
-  /* border: 1px solid red; */
-  padding: 10px;
-}
-
 
 .section-hub {
-  perspective: 1000px;
+  overflow: hidden;
 }
 
 .img-container {
   display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 99%; 
+  height: 100%;
 }
 
 
 img {
   overflow: hidden;
   position: relative;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+  /* width: 50%;
+  height: auto; */
+  min-width: 100px;
+  margin: 20px;
+
 }
 
 img:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
+  z-index: 2;
 }
+
+/* img.active {
+  position: relative;
+  transform: scale(3) translate(-75px, 60px);
+  transition: transform 0.5s ease-in-out;
+  z-index: 101;
+} */
 
 
 .about1 {
   border: 1px solid red;
   top: 103px; 
-  left: 493px;
+  /* left: 493px; */
 }
 
 .about2 {
   border: 1px solid orange;
-  top: 318px;
-  left: 758px;
+  top: -318px;
+  /* left: 758px; */
 }
 
 .portfolio1 {
   border: 1px solid yellow;
-  top: 430px; 
-  left: 847px;
-  perspective-origin: top;
-
+  top: 130px; 
+  /* left: 847px; */
 }
 
 .portfolio2 {
   border: 1px solid greenyellow;
-  top: 231px;
-  left: -27px; 
+  top: -231px;
+  /* left: -27px;  */
 
 }
 
 .portfolio3 {
   border: 1px solid hotpink;
   top: 249px; 
-  left: 252px;  
+  /* left: 252px;   */
 }
 
 .experience1 {
   border: 1px solid green;
-  top: 354px; 
-  left: -50px; 
+  top: -94px; 
+  /* left: -50px;  */
 }
 
 .experience2 {
   border: 1px solid blue;
-  top: 529px; 
-  left: 165px; 
+  top: 329px; 
+  /* left: 165px;  */
 }
 
 .experience3 {
   border: 1px solid blueviolet;
-  top: 127px; 
-  left: 226px;
+  top: -127px; 
+  /* left: 226px; */
 }
 
 .resume {
   border: 1px solid burlywood;
-  top: 547px; 
-  left: -282px;
+  top: 247px; 
+  /* left: -282px; */
 }
 
-.popup.open {
-  background-color: aliceblue;
-  
+.panel {
+  position: absolute; 
+  top: 135%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  z-index: 1000;
+  background-color: white;
+  grid-area: "panel";
+  border: 1px solid red;
 }
+
+.panel h3, p {
+  color: black;
+}
+
+
+
+
+
